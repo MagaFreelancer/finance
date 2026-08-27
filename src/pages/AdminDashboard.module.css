@@ -1,0 +1,272 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.headerInner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.mark {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+}
+
+.user {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 8px;
+}
+
+.main {
+  padding: 36px 0 64px;
+}
+
+.titleRow h1 {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.titleRow p {
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.statCard span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.statCard strong {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+}
+
+.tableCard {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.tableHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tableHead h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.tableHead span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1100px;
+}
+
+.table th,
+.table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+  vertical-align: middle;
+}
+
+.table th {
+  color: var(--text-secondary);
+  font-weight: 600;
+  background: #f8fbfc;
+  white-space: nowrap;
+}
+
+.unread {
+  background: rgba(41, 68, 82, 0.03);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.badge i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.new {
+  color: var(--primary);
+}
+
+.new i {
+  background: var(--primary);
+}
+
+.read {
+  color: var(--text-secondary);
+}
+
+.read i {
+  background: var(--border-strong);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.deleteBtn {
+  color: var(--error);
+  border: 1px solid #f5c2c0;
+  background: #fff;
+}
+
+.deleteBtn:hover:not(:disabled) {
+  background: var(--error-bg);
+}
+
+.state {
+  padding: 56px 24px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.state h3 {
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.state .btn {
+  margin-top: 16px;
+}
+
+.skeletons {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeletonRow {
+  height: 48px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 560px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .headerInner {
+    flex-direction: column;
+    align-items: stretch;
+    padding-block: 12px;
+  }
+
+  .headerActions {
+    justify-content: stretch;
+  }
+
+  .headerActions .btn {
+    flex: 1;
+  }
+}

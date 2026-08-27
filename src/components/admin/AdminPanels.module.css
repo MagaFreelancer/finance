@@ -1,0 +1,187 @@
+.panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.panelHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panelHead h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.panelHead p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.percentForm {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 20px 22px 24px;
+}
+
+.percentField {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 180px;
+}
+
+.percentField input {
+  width: 100%;
+}
+
+.percentField span {
+  color: var(--text-secondary);
+  font-weight: 650;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 18px;
+}
+
+.adminCard {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.adminImage {
+  aspect-ratio: 16 / 10;
+  background: var(--bg-soft);
+}
+
+.adminImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adminBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+}
+
+.adminBody h3 {
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.deleteBtn {
+  color: var(--error);
+  border: 1px solid #f5c2c0;
+  background: #fff;
+}
+
+.deleteBtn:hover:not(:disabled) {
+  background: var(--error-bg);
+}
+
+.state {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.state h3 {
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.state .btn {
+  margin-top: 16px;
+}
+
+.skeletons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 18px;
+}
+
+.skeleton {
+  height: 220px;
+}
+
+.wideModal {
+  width: min(520px, 100%);
+}
+
+.editorForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.preview {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  aspect-ratio: 16 / 10;
+}
+
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.formError {
+  color: var(--error);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .cardsGrid,
+  .skeletons {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .panelHead {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardsGrid,
+  .skeletons {
+    grid-template-columns: 1fr;
+  }
+
+  .percentForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .percentField {
+    max-width: none;
+  }
+}
