@@ -29,7 +29,7 @@ export function Hero() {
         <div className={styles.visual}>
           <div className={styles.orb} aria-hidden />
           <div className={styles.orbSoft} aria-hidden />
-          <HeroCharts />
+          {/* <HeroCharts /> */}
         </div>
       </div>
     </section>
