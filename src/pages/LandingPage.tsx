@@ -30,9 +30,7 @@ export function LandingPage() {
           <HowItWorks />
         </Reveal>
 
-        {/* <Reveal delay={40}>
-          <VideoSection />
-        </Reveal> */}
+       
 
         <Reveal delay={40}>
           <Principles />
