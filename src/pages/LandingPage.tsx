@@ -2,10 +2,8 @@ import { useState } from 'react'
 import { Header } from '../components/layout/Header'
 import { Footer } from '../components/layout/Footer'
 import { Reveal } from '../components/ui/Reveal'
-import { Hero } from '../components/landing/Hero'
 import { Benefits } from '../components/landing/Benefits'
 import { HowItWorks } from '../components/landing/HowItWorks'
-import { VideoSection } from '../components/landing/VideoSection'
 import { Principles } from '../components/landing/Principles'
 import { Products } from '../components/landing/Products'
 import { Calculator, type ProductPrefill } from '../components/calculator/Calculator'
@@ -21,7 +19,7 @@ export function LandingPage() {
       asd
       <main>
         <div className={styles.heroReveal}>
-          <Hero />
+         
         </div>
 
         <Reveal>
