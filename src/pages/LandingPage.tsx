@@ -8,6 +8,8 @@ import { Principles } from '../components/landing/Principles'
 import { Products } from '../components/landing/Products'
 import { Calculator, type ProductPrefill } from '../components/calculator/Calculator'
 import { FAQ } from '../components/landing/FAQ'
+import { Hero } from '../components/landing/Hero'
+
 import styles from './LandingPage.module.css'
 
 export function LandingPage() {
@@ -16,10 +18,9 @@ export function LandingPage() {
   return (
     <>
       <Header />
-      asd
       <main>
         <div className={styles.heroReveal}>
-         
+        <Hero />
         </div>
 
         <Reveal>

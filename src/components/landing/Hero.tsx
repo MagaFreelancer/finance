@@ -26,8 +26,6 @@ export function Hero() {
         </div>
 
         <div className={styles.visual}>
-          <div className={styles.orb} aria-hidden />
-          <div className={styles.orbSoft} aria-hidden />
         </div>
       </div>
     </section>

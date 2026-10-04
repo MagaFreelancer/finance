@@ -2,29 +2,20 @@
   position: relative;
   padding: 56px 0 80px;
   overflow: hidden;
+
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 85% 20%, rgba(41, 68, 82, 0.06), transparent 40%),
-    radial-gradient(circle at 10% 80%, rgba(113, 128, 138, 0.08), transparent 35%);
-  pointer-events: none;
-}
 
-.inner {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 48px;
-  align-items: center;
-  min-height: calc(100vh - var(--header-h) - 80px);
-}
 
 .copy {
-  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+
 }
 
 .eyebrow {
@@ -65,7 +56,7 @@
   margin-top: 32px;
 }
 
-.visual {
+/* .visual {
   position: relative;
   min-height: 420px;
   display: grid;
@@ -392,4 +383,4 @@
   .metric strong {
     font-size: 2.1rem;
   }
-}
+} */
